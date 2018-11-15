@@ -425,9 +425,9 @@ if Code.ensure_loaded?(NaiveDateTime) do
     assert "1111-11-11T11:11:11Z" = Sitemap.Funcs.iso8601 %DateTime{year: 1111, month: 11, day: 11, zone_abbr: "UTC", hour: 11, minute: 11, second: 11, microsecond: {0, 0}, utc_offset: 0, std_offset: 0, time_zone: "Etc/UTC"}
 end
     assert "1111-11-11T11:11:11Z" = Sitemap.Funcs.iso8601 {{1111, 11, 11}, {11, 11, 11}}
-    assert "1111-11-11T11:11:11Z" = Sitemap.Funcs.iso8601 Ecto.DateTime.from_erl({{1111, 11, 11}, {11, 11, 11}})
+    # assert "1111-11-11T11:11:11Z" = Sitemap.Funcs.iso8601 Ecto.DateTime.from_erl({{1111, 11, 11}, {11, 11, 11}})
     assert "1111-11-11" = Sitemap.Funcs.iso8601 ~D[1111-11-11]
-    assert "1111-11-11" = Sitemap.Funcs.iso8601 Ecto.Date.from_erl({1111, 11, 11})
+    # assert "1111-11-11" = Sitemap.Funcs.iso8601 Ecto.Date.from_erl({1111, 11, 11})
   end
 
 end
